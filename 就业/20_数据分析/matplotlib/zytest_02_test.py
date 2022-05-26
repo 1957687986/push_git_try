@@ -5,6 +5,7 @@ import matplotlib
 # matplotlib默认不支持中文
 # matplotlib.rc("font", family = 'MicroSoft YaHei',weight = "blod")
 
+matplotlib.rc("font",family='KaiTi')
 
 x = range(0,120)
 
