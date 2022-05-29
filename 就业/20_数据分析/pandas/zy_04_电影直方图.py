@@ -1,0 +1,43 @@
+import pandas as pd
+from matplotlib import pyplot as plt
+import matplotlib
+
+matplotlib.rc("font",family = "KaiTi")
+
+file_path = "./IMDB-Movie-Data.csv"
+
+df = pd.read_csv(file_path)
+
+print(df.head(1))
+print(df.info())
+
+# rating runtime 分布情况
+# 选择图形，分布情况 -- 直方图
+
+# 准备数据
+runtime_data = df["Runtime (Minutes)"].values
+
+max_runtime = runtime_data.max()
+min_runtime = runtime_data.min()
+
+# 计算组数
+num_bin = (max_runtime - min_runtime) // 5
+print(num_bin)
+
+# 设置图形的大小
+plt.figure(figsize=(20,8),dpi=80)
+
+plt.hist(runtime_data,num_bin)
+
+_x = [min_runtime]
+
+# i = min_runtime
+# while i <= max_runtime + 0.5:
+#     i = i + 0.5
+#     _x.append(i)
+
+plt.xticks(range(min_runtime,max_runtime + 5,5))
+
+plt.grid(alpha = 0.4)
+
+plt.show()
