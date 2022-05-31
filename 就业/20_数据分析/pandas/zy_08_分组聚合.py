@@ -9,7 +9,7 @@ df = pd.read_csv(file_path)
 # print(df.info())
 
 # 在pandas中分组操作比较简单    --- df.groupby(by="columns_name")
-
+grouped = df.groupby(by="columns_name")
 
 print(grouped)
 
