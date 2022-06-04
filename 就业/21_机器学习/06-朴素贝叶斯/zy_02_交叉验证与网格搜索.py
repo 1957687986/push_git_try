@@ -1,5 +1,5 @@
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split,GridSearchCV
 from sklearn.preprocessing import  StandardScaler
 import pandas as pd
 """
@@ -12,6 +12,9 @@ K-近邻算法公式:
 1. 调用fit   fit(x_train,y_train)  为了输入算法当中
 2. 输入测试集数据
 3. 评估
+
+交叉验证
+
 """
 
 def knncls():
@@ -74,18 +77,23 @@ def knncls():
     x_test = std.transform(x_test)
 
     # 进行算法流程
-    knn = KNeighborsClassifier(n_neighbors=5)
+    knn = KNeighborsClassifier()
 
-    # fit predict score
-    knn.fit(x_train,y_train)
+    # 构造一些参数的值进行搜索
+    param = {"n_neighbors":[3,5,10]}
 
-    # 得出预测结果
-    y_predict = knn.predict(x_test)
+    # 进行网格搜索
+    gc = GridSearchCV(knn,param_grid=param,cv=10)
 
-    print("预测目标签到位置为：",y_predict)
+    gc.fit(x_train,y_train)
 
-    # 得出准确率
-    print("预测准确率：",knn.score(x_test,y_test))
+    print("在测试集上的准确率：",gc.score(x_test,y_test))
+
+    print("在交叉验证中最好的结果：",gc.best_score_)
+
+    print("选择的最好的模型是：",gc.best_estimator_)
+
+    print("每个超参数每次交叉验证的结果：",gc.cv_results_)
 
     return None
 
