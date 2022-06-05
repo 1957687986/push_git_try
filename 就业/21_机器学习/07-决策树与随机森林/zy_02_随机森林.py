@@ -30,8 +30,9 @@ def decision():
 
     # 进行处理（特征工程）特征 -> 为类别 -> one_hot编码
     dict = DictVectorizer(sparse=False)
+
     # x_train.to_dict(orient="records") -- pd转换字典，特征抽取
-    # ['age', 'pclass=1st', 'pclass=2nd', 'pclass=3rd', 'sex=female', 'sex=male']
+    # dict抽取完的结果：['age', 'pclass=1st', 'pclass=2nd', 'pclass=3rd', 'sex=female', 'sex=male']
     x_train = dict.fit_transform(x_train.to_dict(orient="records"))
 
     print(dict.get_feature_names())
