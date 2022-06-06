@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<section class="top-bottom flex">
+    <style>
+      html,
+      body,
+      .flex,
+      article {
+        height: 100%;
+      }
+
+      .flex article {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .flex .top {
+        height: 80px;
+        background: #002060;
+      }
+
+      .flex .middle {
+        flex: 1;
+        height: 100%;
+          background-color: #f2f2f2;
+          background-size: 100% 100%;
+      }
+
+      .flex .bottom {
+        height: 50px;
+          background: #2f5597;
+      }
+      p#p1{
+          color: #EEEEEE;
+          font-size: 30px;
+      }
+      p#p2{
+          color: #EEEEEE;
+          word-spacing:30px;
+      }
+        .left-group{
+            width: 33%;
+            text-align: left;
+            float: left;
+            font-size: 20px;
+            color: #EEEEEE;
+        }
+         .right-group{
+            width: 33%;
+            text-align: right;
+            float: left;
+            font-size: 20px;
+            color: #EEEEEE;
+         }
+        .mid-group {
+            /*flex: 1;*/
+            width: 34%;
+            text-align: center;
+            float: left;
+            font-size: 20px;
+            color: #EEEEEE;
+        }
+        /* 导航条 */
+        .topnav {
+          overflow: hidden;
+          background-color: #9dc3e6;
+        }
+
+        /* 导航链接 */
+        .topnav a {
+          float: left;
+          display: block;
+          color: #002060;
+          text-align: center;
+          padding: 14px 40px;
+          text-decoration: none;
+        }
+
+        /* 链接 - 修改颜色 */
+        .topnav a:hover {
+          background-color: #002060;
+          color: black;
+            font-size: 20px;
+        }
+        #button1{
+
+        }
+
+    </style>
+    <article>
+      <div class="top">
+          <p id = "p1">
+              Ocean Sediment Database
+              <input type="submit" name="denglu" id="button1" value="Login/Register"
+                     style="float: right;width: 150px;height: 40px;border-radius:15px; "/>
+          </p>
+      </div>
+
+      <div class="middle" >
+          <div class="topnav">
+          <a href="zy_01_test.html">Home</a>
+          <a href="zy_02_test.html">Introducation</a>
+          <a href="#">Acces Data</a>
+          <a href="#">Submit</a>
+          <a href="#">About us</a>
+        </div>
+      </div>
+
+      <div class="bottom">
+          <div class="left-group">Pert of OneSediment in the DDE</div>
+          <div class="mid-group">Funded by the NSFC</div>
+          <div class="right-group">Ocean Sediment Database,Copyright @ 2022</div>
+      </div>
+    </article>
+  </section>
+
+</body>
+</html>
