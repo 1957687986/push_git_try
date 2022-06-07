@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-<section class="top-bottom flex">
-    <style>
-      html,
+html,
       body,
       .flex,
       article {
@@ -30,6 +20,7 @@
         height: 100%;
           background-color: #f2f2f2;
           background-size: 100% 100%;
+          overflow-y: auto;
       }
 
       .flex .bottom {
@@ -39,10 +30,6 @@
       p#p1{
           color: #EEEEEE;
           font-size: 30px;
-      }
-      p#p2{
-          color: #EEEEEE;
-          word-spacing:30px;
       }
         .left-group{
             width: 33%;
@@ -84,41 +71,29 @@
 
         /* 链接 - 修改颜色 */
         .topnav a:hover {
-          background-color: #002060;
-          color: black;
+            background-color: #002060;
+            color: black;
             font-size: 20px;
         }
         #button1{
-
+            background:transparent;
+            color: #EEEEEE;
+            border: 2px solid white;
         }
-
-    </style>
-    <article>
-      <div class="top">
-          <p id = "p1">
-              Ocean Sediment Database
-              <input type="submit" name="denglu" id="button1" value="Login/Register"
-                     style="float: right;width: 150px;height: 40px;border-radius:15px; "/>
-          </p>
-      </div>
-
-      <div class="middle" >
-          <div class="topnav">
-          <a href="zy_01_test.html">Home</a>
-          <a href="zy_02_test.html">Introducation</a>
-          <a href="#">Acces Data</a>
-          <a href="#">Submit</a>
-          <a href="#">About us</a>
-        </div>
-      </div>
-
-      <div class="bottom">
-          <div class="left-group">Pert of OneSediment in the DDE</div>
-          <div class="mid-group">Funded by the NSFC</div>
-          <div class="right-group">Ocean Sediment Database,Copyright @ 2022</div>
-      </div>
-    </article>
-  </section>
-
-</body>
-</html>
+        #Summary{
+            position:absolute;
+            left: 120px;
+            color: #002060;
+        }
+        #wenzi{
+            position:absolute;
+            left: 120px;
+            top: 200px;
+            color: #002060;
+            width:1250px;
+            height:145px;
+            border:2px solid #002060 ;
+            padding:5px;
+            border-radius:10px;
+            line-height:30px;
+        }
