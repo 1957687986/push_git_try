@@ -11,7 +11,7 @@ html,
       }
 
       .flex .top {
-        height: 80px;
+        height: 19.5%;
         background: #002060;
       }
 
@@ -24,7 +24,7 @@ html,
       }
 
       .flex .bottom {
-        height: 50px;
+        height: 7%;
           background: #2f5597;
       }
       p#p1{
@@ -59,22 +59,36 @@ html,
           background-color: #9dc3e6;
         }
 
+         /* 导航条 */
+      .topnav {
+          overflow: hidden;
+          background-color: #9dc3e6;
+          height: 100%;
+      }
+
         /* 导航链接 */
-        .topnav a {
+      .topnav li {
           float: left;
           display: block;
           color: #002060;
           text-align: center;
-          padding: 14px 40px;
+          padding: 0px 40px;
           text-decoration: none;
-        }
+      }
+      .topnav li a {
+          float: left;
+          display: block;
+          text-align: center;
+          padding: 0px 40px;
+          text-decoration: none;
+      }
 
         /* 链接 - 修改颜色 */
-        .topnav a:hover {
-            background-color: #002060;
-            color: black;
-            font-size: 20px;
-        }
+      .topnav li a:hover {
+          background-color: #9dc3e6;
+          color: white;
+          font-size: 20px;
+      }
         #button1{
             background:transparent;
             color: #EEEEEE;
@@ -83,12 +97,13 @@ html,
         #Summary{
             position:absolute;
             left: 120px;
+            top:20%;
             color: #002060;
         }
         #wenzi{
             position:absolute;
             left: 120px;
-            top: 200px;
+            top: 30%;
             color: #002060;
             width:1250px;
             height:145px;
@@ -96,4 +111,12 @@ html,
             padding:5px;
             border-radius:10px;
             line-height:30px;
+        }
+        .bianse
+        {
+            color: #0000ff;
+        }
+        .bianse1
+        {
+            color: #002060;
         }

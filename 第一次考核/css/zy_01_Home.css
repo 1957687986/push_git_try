@@ -1,5 +1,4 @@
-html,
-      body,
+html, body,
       .flex,
       article {
           height: 100%;
@@ -11,7 +10,7 @@ html,
       }
 
       .flex .top {
-          height: 80px;
+          height: 19.5%;
           background: #002060;
       }
 
@@ -23,7 +22,7 @@ html,
       }
 
       .flex .bottom {
-          height: 50px;
+          height: 7%;
           background: #2f5597;
       }
       p#p1{
@@ -56,34 +55,44 @@ html,
       .topnav {
           overflow: hidden;
           background-color: #9dc3e6;
+          flex: 1;
+          height: 100%;
       }
 
         /* 导航链接 */
-      .topnav a {
+      .topnav li {
           float: left;
           display: block;
           color: #002060;
           text-align: center;
-          padding: 14px 40px;
+          padding: 0px 40px;
+          text-decoration: none;
+      }
+      .topnav li a {
+          float: left;
+          display: block;
+          text-align: center;
+          padding: 0px 40px;
           text-decoration: none;
       }
 
         /* 链接 - 修改颜色 */
-      .topnav a:hover {
-          background-color: #002060;
-          color: black;
+      .topnav li a:hover {
+          background-color: #9dc3e6;
+          color: white;
           font-size: 20px;
       }
       div#database01{
           width: 100%;
-          height: 30%;
+          height: 40%;
           text-align: center;
           color: #002060;
           font-size: 40px;
       }
       div#database01-1{
           position: absolute;
-          bottom: 430px;
+          text-align: center;
+          padding-top: 25%;
           left: 50%;
           transform: translate(-50%, -50%);
       }
@@ -93,7 +102,7 @@ html,
       }
       div#database03{
           width: 100%;
-          height: 50%;
+          height: 40%;
       }
 
       .left-group01{
@@ -134,3 +143,11 @@ html,
           filter: none;
           font-size: 30px;
       }
+      .bianse
+        {
+            color: #0000ff;
+        }
+        .bianse1
+        {
+            color: #002060;
+        }

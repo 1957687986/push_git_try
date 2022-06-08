@@ -1,31 +1,54 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript">
+        function showsubmenu(sid) {
+            for (i = 1; i < 4; i++) {
+                if (i == sid) {
+                    if (document.getElementById(sid).className != "bianse") {
+                        document.getElementById(sid).className = "bianse"
+                    }
+                }
+                else {
+                    document.getElementById(i).className = "bianse1";
+                }
+            }
+        }
+    </script>
 </head>
 <link rel="stylesheet" type="text/css" href="../css/zy_01_Home.css">
+<!--<script type="text/javascript" src="../js/zy_01_Home.js" ></script>-->
 <body>
 
 <section class="top-bottom flex">
     <article>
       <div class="top">
-          <p id = "p1">
-              Ocean Sediment Database
-              <button type="button"
-                      style="float: right;width: 150px;height: 40px;border-radius:15px;border-color: white;
-                      color: #a5aab0;font-weight: bold;background:transparent;margin-right: 20px">Login/Register</button>
-          </p>
+          <div>
+              <p id = "p1">
+                  Ocean Sediment Database
+                  <button type="button"
+                          style="float: right;width: 150px;height: 40px;border-radius:15px;border-color: white;
+                          color: #a5aab0;font-weight: bold;background:transparent;margin-right: 20px">
+                      <img src="../Img/登录.png" style="width: 20px;padding-top: 2px">
+                      <div style="float: right;padding-top: 5px">Login/Register</div>
+                  </button>
+            </p>
+          </div>
+          <div class="topnav">
+              <ul>
+                  <li><a id="1" class="bianse" href="./zy_01_Home.html" onclick="showsubmenu(this.id)">Home</a></li>
+                  <li><a id="2" class="bianse1" href="./zy_02_Introduction.html" onclick="showsubmenu(this.id)">Introducation</a></li>
+                  <li><a class="bianse1" href="#">Acces Data</a></li>
+                  <li><a class="bianse1" href="#">Submit</a></li>
+                  <li><a id="3" class="bianse1" href="./zy_03_about_as.html" onclick="showsubmenu(this.id)">About us</a></li>
+              </ul>
+          </div>
       </div>
 
       <div class="middle" >
-          <div class="topnav">
-              <div><a href="./zy_01_Home.html" id="a1">Home</a></div>
-              <a href="./zy_02_Introduction.html" id="a2">Introducation</a>
-              <a href="#">Acces Data</a>
-              <a href="#">Submit</a>
-              <a href="./zy_03_about_as.html" id="a3">About us</a>
-          </div>
+
           <div id="database01">
               <div id="database01-1">Ocean Sediment Database</div>
           </div>
@@ -45,10 +68,11 @@
           </div>
           <div id="database03">
             <div id="search">
-                <div>
-                    <input id = search1 type="text" value="Search Data" style="width: 300px;height: 50px;text-align: center" >
-                    <a style="position: absolute;left: 620px;padding-top: 3px"><img class="img" src="../Img/图片3.png" width="50px"/></a>
-                </div>
+                <button id = search1 type="button" style="width: 300px;height: 50px;" >
+                    <img class="img" src="../Img/图片3.png" width="40px"/>
+                    <div style="float: right;padding-right: 30px;padding-top: 5px" >Search Data</div>
+                </button>
+<!--                    <a style="position: absolute;left: 620px;padding-top: 3px"><img class="img" src="../Img/图片3.png" width="50px"/></a>-->
             </div>
           </div>
 

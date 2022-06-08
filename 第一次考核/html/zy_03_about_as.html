@@ -3,6 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript">
+        function showsubmenu(sid) {
+            for (i = 1; i < 4; i++) {
+                if (i == sid) {
+                    if (document.getElementById(sid).className != "bianse") {
+                        document.getElementById(sid).className = "bianse"
+                    }
+                }
+                else {
+                    document.getElementById(i).className = "bianse1";
+                }
+            }
+        }
+    </script>
 </head>
 <link rel="stylesheet" type="text/css" href="../css/zy_03_about_as.css">
 <body>
@@ -13,22 +27,29 @@
 <!--    </style>-->
     <article>
       <div class="top">
-          <p id = "p1">
-              Ocean Sediment Database
-              <button type="button"
-                      style="float: right;width: 150px;height: 40px;border-radius:15px;border-color: white;
-                      color: #a5aab0;font-weight: bold;background:transparent;margin-right: 20px">Login/Register</button>
-          </p>
+          <div>
+              <p id = "p1">
+                  Ocean Sediment Database
+                  <button type="button"
+                          style="float: right;width: 150px;height: 40px;border-radius:15px;border-color: white;
+                          color: #a5aab0;font-weight: bold;background:transparent;margin-right: 20px">
+                      <img src="../Img/登录.png" style="width: 20px">
+                      <div style="float: right;padding-top: 5px">Login/Register</div>
+                  </button>
+              </p>
+          </div>
+          <div class="topnav">
+              <ul>
+                  <li><a id="1" class="bianse1" href="./zy_01_Home.html" onclick="showsubmenu(this.id)">Home</a></li>
+                  <li><a id="2" class="bianse1" href="./zy_02_Introduction.html" onclick="showsubmenu(this.id)">Introducation</a></li>
+                  <li><a class="bianse1" href="#">Acces Data</a></li>
+                  <li><a class="bianse1" href="#">Submit</a></li>
+                  <li><a id="3" class="bianse" href="./zy_03_about_as.html" onclick="showsubmenu(this.id)">About us</a></li>
+              </ul>
+          </div>
       </div>
 
       <div class="middle" >
-          <div class="topnav">
-              <a href="zy_01_Home.html">Home</a>
-              <a href="zy_02_Introduction.html">Introducation</a>
-              <a href="#">Acces Data</a>
-              <a href="#">Submit</a>
-              <a href="zy_03_about_as.html">About us</a>
-          </div>
           <div class="row" >
               <div class="buju_side" style="float:left ; width:20%; height:100%;">
                 <ul>
@@ -167,12 +188,12 @@
                   <div>
                       <h1 class="h1-1" id="Partner">Partner</h1>
                       <div style="float: left;width: 99%;height: 200px;background-color: white;border-radius:10px">
-                          <div style="width: 16.5%;float: left;text-align: center;padding-top: 15px"><a href="#"><img src="../Img/南京大学.png" style="width: 150px;"></a></div>
-                          <div style="width: 16.5%;float: left;text-align: center;padding-top: 30px"><a href="#"><img src="../Img/南京信息工程大学.png" style="width: 150px;"></a></div>
-                          <div style="width: 16.5%;float: left;text-align: center;padding-top: 30px"><a href="#"><img src="../Img/南京理工大学.png" style="width: 150px;"></a></div>
-                          <div style="width: 16.5%;float: left;text-align: center;padding-top: 25px"><a href="#"><img src="../Img/同济大学.png" style="width: 150px;"></a></div>
-                          <div style="width: 16.5%;float: left;text-align: center;padding-top: 25px"><a href="#"><img src="../Img/中国地质大学.png" style="width: 150px;"></a></div>
-                          <div style="width: 16.5%;float: left;text-align: center;padding-top: 60px"><a href="#"><img src="../Img/江西.png" style="width: 150px;"></a></div>
+                          <div style="width: 16.5%;float: left;text-align: center;padding-top: 15px"><a href="https://www.nju.edu.cn/main.htm"><img src="../Img/南京大学.png" style="width: 150px;"></a></div>
+                          <div style="width: 16.5%;float: left;text-align: center;padding-top: 30px"><a href="https://www.nuist.edu.cn/"><img src="../Img/南京信息工程大学.png" style="width: 150px;"></a></div>
+                          <div style="width: 16.5%;float: left;text-align: center;padding-top: 30px"><a href="https://www.cdut.edu.cn/"><img src="../Img/南京理工大学.png" style="width: 150px;"></a></div>
+                          <div style="width: 16.5%;float: left;text-align: center;padding-top: 25px"><a href="https://www.tongji.edu.cn/"><img src="../Img/同济大学.png" style="width: 150px;"></a></div>
+                          <div style="width: 16.5%;float: left;text-align: center;padding-top: 25px"><a href="https://www.cugb.edu.cn/"><img src="../Img/中国地质大学.png" style="width: 150px;"></a></div>
+                          <div style="width: 16.5%;float: left;text-align: center;padding-top: 60px"><a href="https://www.ddeworld.org/"><img src="../Img/江西.png" style="width: 150px;"></a></div>
                       </div>
                   </div>
                   <div>
