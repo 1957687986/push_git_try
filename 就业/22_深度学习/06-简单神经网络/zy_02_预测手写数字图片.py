@@ -79,19 +79,19 @@ def full_connect():
             for i in range(2000):
 
                 # 取出真实存在的特征值和目标值
-                minst_x,minst_y = mnist.train.next_batch(50)
+                mnist_x,mnist_y = mnist.train.next_batch(50)
 
                 # 运行train_op训练
-                sess.run(train_op, feed_dict={x: minst_x, y_true:minst_y})
+                sess.run(train_op, feed_dict={x: mnist_x, y_true:mnist_y})
 
                 # 写入每步训练的值
-                summary = sess.run(merged,feed_dict={x: minst_x, y_true:minst_y})
+                summary = sess.run(merged,feed_dict={x: mnist_x, y_true:mnist_y})
 
                 filewriter.add_summary(summary,i)
 
                 print("训练第%d步，准确率为%f,损失值为%f" %(i,
-                                               sess.run(accuracy,feed_dict={x: minst_x, y_true:minst_y}),
-                                               sess.run(loss,feed_dict={x: minst_x, y_true:minst_y})))
+                                               sess.run(accuracy,feed_dict={x: mnist_x, y_true:mnist_y}),
+                                               sess.run(loss,feed_dict={x: mnist_x, y_true:mnist_y})))
 
 
             # 保存模型
