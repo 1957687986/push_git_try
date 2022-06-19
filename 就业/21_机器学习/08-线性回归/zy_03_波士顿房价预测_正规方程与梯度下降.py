@@ -46,7 +46,7 @@ def mylinear():
     print("正规方程的均方误差：",mean_squared_error(std_y.inverse_transform(y_test),y_lr_predict))
 
 
-    # 梯度下降回归预测
+    # 梯度下降回归优化
     sgd = SGDRegressor()
 
     sgd.fit(x_train, y_train)
