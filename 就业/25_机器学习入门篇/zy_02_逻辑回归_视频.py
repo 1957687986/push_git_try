@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
+import numpy.random
 
 path = "LogReg_data.txt"
 
@@ -53,5 +54,29 @@ def cost(x,y,theta):
     right = np.multiply(1 - y,np.log(1-model(x,theta)))
     return np.sum(left-right)
 
-cost(x,y,theta)
+print(cost(x,y,theta))
 
+def gradient(x,y,theta):
+    grad = np.zeros(theta.shape)
+    error = (model(x,theta) - y).ravel()
+    for i in range(len(theta.ravel())):
+        term = np.multiply(error,x[:,i])
+        grad[0, i] = np.sum(term) / len(x)
+    return grad
+
+STOP_ITER = 0
+STOP_COST = 1
+STOP_GRAD = 2
+
+def stopCriterion(type, value, threshold):
+    if type == STOP_ITER:
+        return value > threshold
+    elif type ==STOP_COST:
+        return abs(value[-1]-value[-2]) < threshold
+    elif type == STOP_GRAD:
+        return np.linalg.norm(value) < threshold
+
+def shuffleData(data):
+    np.random.shuffle(data)
+    cols = data.shape[1]
+    x = data[:]
