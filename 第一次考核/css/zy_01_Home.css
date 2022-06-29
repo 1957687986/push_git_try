@@ -55,7 +55,7 @@ html, body,
       .topnav {
           overflow: hidden;
           background-color: #9dc3e6;
-          flex: 1;
+          /*flex: 1;*/
           height: 100%;
       }
 
@@ -72,7 +72,7 @@ html, body,
           float: left;
           display: block;
           text-align: center;
-          padding: 0px 40px;
+          padding: 2px 40px;
           text-decoration: none;
       }
 
@@ -90,11 +90,11 @@ html, body,
           font-size: 40px;
       }
       div#database01-1{
-          position: absolute;
-          text-align: center;
-          padding-top: 25%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+          /*position: absolute;*/
+          /*text-align: center;*/
+          padding-top: 10%;
+          /*left: 50%;*/
+          /*transform: translate(-50%, -50%);*/
       }
       div#database02{
           width: 100%;
