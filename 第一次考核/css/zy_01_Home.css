@@ -10,7 +10,12 @@ html, body,
       }
 
       .flex .top {
-          height: 19.5%;
+          height: 12%;
+          background: #002060;
+      }
+
+      .flex .topnav {
+          height: 7.5%;
           background: #002060;
       }
 
@@ -51,29 +56,39 @@ html, body,
           font-size: 20px;
           color: #EEEEEE;
       }
+
+      div#nav{
+          text-align: center;
+      }
+
         /* 导航条 */
-      .topnav {
+      .topnav ul {
           overflow: hidden;
           background-color: #9dc3e6;
           /*flex: 1;*/
           height: 100%;
+          /*width: 100%;*/
+          text-align: center;
       }
 
         /* 导航链接 */
-      .topnav li {
+      .topnav ul li {
           float: left;
-          display: block;
+          display: flex;
           color: #002060;
           text-align: center;
-          padding: 0px 40px;
-          text-decoration: none;
+          /*padding: 6px 40px;*/
+          padding-left: 55px;
+          padding-top: 1%;
       }
       .topnav li a {
           float: left;
-          display: block;
+          display: flex;
           text-align: center;
-          padding: 2px 40px;
+          /*padding: 4px 40px;*/
+          /*margin: auto auto;*/
           text-decoration: none;
+          padding-left: 70px;
       }
 
         /* 链接 - 修改颜色 */
