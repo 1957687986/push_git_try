@@ -5,9 +5,8 @@ from torch import optim
 
 # 做视觉
 import torchvision
-from matplotlib import pyplot as plt
 
-from utils import  plot_image,plot_curve,one_hot
+from PyTroch入手.utils import  plot_image,plot_curve,one_hot
 
 # 一次处理的图片数
 batch_size = 512
