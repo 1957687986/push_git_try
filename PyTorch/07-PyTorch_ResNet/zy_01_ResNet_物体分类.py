@@ -28,13 +28,14 @@ def main():
     x, label = iter(cifar_train).__next__()
     print("x:",x.shape,"label:",label.shape)
 
-    device = torch.device("cpu")
+    device = torch.device("cuda")
     model = Lenet5().to(device)
     criteon = nn.CrossEntropyLoss().to(device)
     optimizer = optim.Adam(model.parameters(), lr=0.001)
     print(model)
 
     for epoch in range(1000):
+        model.train()
         for batchidx, (x, label) in enumerate(cifar_train):
             # [b, 3, 32, 32]
             # [b]
@@ -53,14 +54,31 @@ def main():
 
         print(epoch,loss.item())
 
-        # test
-        for x,label in cifar_test:
-            # [b, 3, 32, 32]
-            # [b]
-            x, label = x.to(device), label.to(device)
 
-            # [b,10]
-            logits = model(x)
+        model.eval()
+        with torch.no_grad():
+            # test
+            total_correct = 0
+            total_num = 0
+            for x,label in cifar_test:
+                # [b, 3, 32, 32]
+                # [b]
+                x, label = x.to(device), label.to(device)
+
+                # [b,10]
+                logits = model(x)
+
+                # [b]
+                pred = logits.argmax(dim=1)
+
+                # [b]  vs  [b]  =>  scalar  tensor
+                total_correct += torch.eq(pred, label).float().sum().item()
+
+                total_num += x.size(0)
+
+            acc = total_correct/total_num
+            print(epoch, acc)
+
 
 
 
